@@ -1,0 +1,59 @@
+﻿@model NEW_LTD.Models.AddCustomerModel
+
+@{
+    ViewData["Title"] = "הוספת לקוח";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/register.css" />
+}
+
+<div class="register-container">
+    <div class="register-card">
+        <h1>Communication_LTD</h1>
+        <p class="subtitle">הוספת לקוח חדש</p>
+
+        <!-- שגיאות ולידציה -->
+        @Html.ValidationSummary(false, "", new { @class = "error-message" })
+
+        <form method="post">
+
+            <div class="form-group">
+                <label>שם מלא</label>
+                <input asp-for="FullName" dir="ltr" required />
+            </div>
+
+            <div class="form-group">
+                <label>מספר טלפון</label>
+                <input asp-for="PhoneNumber"  dir="ltr" required />
+            </div>
+
+            <div class="form-group">
+                <label>סוג חבילה</label>
+                <select asp-for="PackageType" required>
+                    <option value="">בחר חבילה</option>
+                    <option>Basic</option>
+                    <option>Premium</option>
+                    <option>Business</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>סקטור</label>
+                <select asp-for="Sector" required>
+                    <option value="">בחר סקטור</option>
+                    <option>עסקי</option>
+                    <option>פרטי</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-register">
+                הוסף לקוח
+            </button>
+        </form>
+
+        <div class="links">
+            <a asp-action="Dashboard">חזרה לדשבורד</a>
+        </div>
+    </div>
+</div>

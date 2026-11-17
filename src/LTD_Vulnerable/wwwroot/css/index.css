@@ -1,0 +1,114 @@
+﻿.index-background {
+    position: relative;
+    min-height: calc(100vh - 64px);
+    overflow: hidden;
+    background: radial-gradient(circle at top, #0b1d26, #0f2027, #203a43);
+}
+
+.animated-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 70px 70px;
+    animation: moveGrid 22s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveGrid {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 700px 700px;
+    }
+}
+
+.index-container {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-card {
+    background: rgba(255,255,255,0.97);
+    padding: 80px 90px;
+    border-radius: 28px;
+    text-align: center;
+    max-width: 760px;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.45);
+    animation: fadeUp 1.2s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-title {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    color: #0f172a;
+    letter-spacing: 1px;
+}
+
+    .main-title span {
+        color: #203a43;
+    }
+
+.description {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 55px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn {
+    width: 240px;
+    padding: 18px 0;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+    .btn.primary {
+        background: linear-gradient(135deg, #203a43, #2c5364);
+        color: white;
+    }
+
+        .btn.primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(44,83,100,0.45);
+        }
+
+    .btn.secondary {
+        background: #e5e7eb;
+        color: #0f172a;
+    }
+
+        .btn.secondary:hover {
+            background: #d1d5db;
+            transform: translateY(-4px);
+        }

@@ -1,0 +1,103 @@
+﻿.register-container {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.register-card {
+    background: #ffffff;
+    padding: 45px 42px;
+    border-radius: 16px;
+    width: 440px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.28);
+}
+
+    .register-card h1 {
+        text-align: center;
+        margin-bottom: 6px;
+        color: #243b55;
+    }
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #6b7280;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #1f2933;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 13px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        transition: 0.25s;
+    }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #243b55;
+            box-shadow: 0 0 0 3px rgba(36,59,85,0.2);
+        }
+
+.btn-register {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #243b55, #141e30);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .btn-register:hover {
+        opacity: 0.92;
+    }
+
+.links {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+    .links a {
+        color: #243b55;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+
+.register-card {
+    animation: slideFadeIn 1s ease-out;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+

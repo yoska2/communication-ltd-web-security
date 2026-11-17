@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Communication_LTD</title>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="logo">Communication_LTD</div>
+        <nav>
+            <a href="/">בית</a>
+            <a href="/Account/Login">התחברות</a>
+            <a href="/Account/Register">הרשמה</a>
+            <a href="/Home/Privacy">פרטיות</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        @RenderBody()
+    </main>
+
+
+    <script src="~/js/click-sound.js"></script>
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>

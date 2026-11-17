@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <h1>Communication_LTD</h1>
+        <p class="subtitle">התחברות למערכת</p>
+
+        <form method="post">
+
+            <!-- הצגת שגיאות התחברות -->
+            @Html.ValidationSummary(false, "", new { @class = "error-message" })
+
+            <div class="form-group">
+                <label>שם משתמש</label>
+                <input type="text" name="username" dir="ltr" placeholder="הכנס שם משתמש" required />
+            </div>
+
+            <div class="form-group">
+                <label>סיסמה</label>
+                <input type="password"  dir="ltr" name="password" placeholder="הכנס סיסמה" required />
+            </div>
+
+            <button type="submit"   dir="ltr" class="btn-login">התחבר</button>
+
+            <div class="links">
+                <a href="/Account/ForgotPassword">שכחתי סיסמה</a>
+                <span>|</span>
+                <a href="/Account/Register">הרשמה</a>
+            </div>
+        </form>
+    </div>
+</div>

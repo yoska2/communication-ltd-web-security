@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/register.css" />
+}
+
+<div class="register-container">
+    <div class="register-card">
+        <h1>Communication_LTD</h1>
+        <p class="subtitle">יצירת משתמש חדש</p>
+
+        <form method="post">
+
+            <!-- הצגת כל שגיאות הוולידציה -->
+            @Html.ValidationSummary(false, "", new { @class = "error-message" })
+
+            <div class="form-group">
+                <label>שם משתמש</label>
+                <input type="text"  dir="ltr" name="username" required />
+            </div>
+
+            <div class="form-group">
+                <label>אימייל</label>
+                <input type="email"  dir="ltr" name="email" required />
+            </div>
+
+            <div class="form-group">
+                <label>סיסמה</label>
+                <input type="password" dir="ltr" name="password" required />
+            </div>
+
+            <button type="submit" class="btn-register">הרשמה</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@section Styles {
+<link rel="stylesheet" href="~/css/customersTable.css" />
+}
+<div class="customers-page">
+    <div class="customers-card">
+        <h1> לקוחות קיימים</h1>
+
+        
+        <table class="customers-table">
+            <thead>
+                <tr>
+                    <th>שם מלא</th>
+                    <th>טלפון</th>
+                    <th>חבילה</th>
+                    <th>סקטור</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model)
+                {
+                <tr>
+                    <td>@Html.Raw(c.FullName)</td>
+                    <!--Razor כדי לבטל במכוון את הקידוד האוטומטי של  Html.Rawכאן השתמשנו ב  -->
+                    <!-- Stored XSS וזאת כדי להראות מתקפת-->
+                    <!-- בגרסה המוגנת יש שימוש בפונקצית קידוד עצמאית-->
+
+                    <td>@c.PhoneNumber</td>
+                    <td>
+                        <span class="package @c.PackageType.ToLower()">
+                            @c.PackageType
+                        </span>
+                    </td>
+                    <td>@c.Sector</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        
+
+        <a class="back-btn" href="/Home/Dashboard">⬅ חזרה לפעולות</a>
+    </div>
+</div>

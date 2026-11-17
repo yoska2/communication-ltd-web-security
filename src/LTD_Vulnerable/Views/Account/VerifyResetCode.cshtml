@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "אישור קוד";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <h1>Communication_LTD</h1>
+        <p class="subtitle">אישור קוד איפוס סיסמה</p>
+
+        @Html.ValidationSummary(false, "", new { @class = "error-message" })
+
+        <form method="post">
+            <div class="form-group">
+                <label>אימייל</label>
+                <input type="email"
+                       name="email"
+                       placeholder="הכנס את האימייל שלך"
+                       required />
+            </div>
+
+            <div class="form-group">
+                <label>קוד איפוס</label>
+                <input type="text"
+                       name="code"
+                       placeholder="הכנס את הקוד שקיבלת במייל"
+                       required />
+            </div>
+
+            <button type="submit" class="btn-login">
+                אישור
+            </button>
+
+            <div class="links">
+                <a asp-action="Login">חזרה להתחברות</a>
+            </div>
+        </form>
+    </div>
+</div>

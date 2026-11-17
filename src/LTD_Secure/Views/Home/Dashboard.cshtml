@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    // בעתיד תוכל להעביר שם עובד מה-Controller
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+}
+
+<div class="dashboard-background">
+    <!-- רקע מונפש עדין -->
+    <div class="animated-grid"></div>
+
+    <div class="dashboard-container">
+
+        <!-- ברכה אישית -->
+        <div class="welcome-section">
+            <h1>ברוך הבא, @ViewBag.Username 👋</h1>
+            <p>מה שלומך היום? בחר/י פעולה כדי להתחיל.</p>
+        </div>
+
+        <!-- אפשרויות -->
+        <div class="actions-grid">
+
+            <!-- הוספת לקוח -->
+            <div class="action-card">
+                <h3>➕ הוספת לקוח חדש</h3>
+                <p>
+                    הזנת פרטי לקוח חדש למערכת
+                </p>
+                <a href="/Home/AddCustomer">המשך</a>
+            </div>
+
+            <!-- צפייה בלקוחות -->
+            <div class="action-card">
+                <h3>📋 צפייה בלקוחות קימיים</h3>
+                <p>
+                    צפייה בכל טבלאות ונתוני הלקוחות
+                </p>
+                <a href="/Home/CustomersTable">המשך</a>
+            </div>
+
+            <div class="action-card">
+                <h3>🔑 שינוי סיסמה</h3>
+                <p>  </p>
+                <a href="/Account/ChangePassword">המשך</a>
+            </div>
+        </div>
+    </div>
+</div>
